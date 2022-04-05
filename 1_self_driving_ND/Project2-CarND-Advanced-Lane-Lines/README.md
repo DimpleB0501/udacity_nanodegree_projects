@@ -33,22 +33,22 @@ The correct application of distortion correction can be verified by comparing ho
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 I implemented gradient thresholding via sobel in x-direction, magnitude and direction of gradient which were able to fairly detect lane lines. Incase of lanes lines having shadow on it, gradient threshold was failing. Therefore I implemented color thresholding using saturation parameter in the HLS space as S channel is efficient in detecting yellow and white lanes.
-![Combined Binary Threshold Image](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project2-CarND-Advanced-Lane-Lines/output_images/binaryThresholdedImage.png)
+![Combined Binary Threshold Image](./output_images/binaryThresholdedImage.png)
 The code for this implementation is in cell 5 and 6 of the submitted code.
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
 After manually examining the image, I extracted vertices to perform perspective transform. I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image. Following is an output of the undistorted threshold warped image:
 
-![Perspective Transform](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project2-CarND-Advanced-Lane-Lines/output_images/preprocessingPriorToFit.png)
+![Perspective Transform](./output_images/preprocessingPriorToFit.png)
 The code for this implementation is in cell 8,9 and 10 of the submitted code.
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 After applying calibration, thresholding and perspective transform we have an binary image where the lane lines stand out clearly. To determine which pixels are part of the lines as well as to determine if the belong to right or left lines.
 I first take a histogram along all columns in lower half of image. The prominenet peaks in this histogram will be good indicators of base position of lane lines. After which sliding window is placed around line centers to track the lines to the top of the frame. Following image is an implementation of this step:
-![Sliding Window](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project2-CarND-Advanced-Lane-Lines/output_images/firstSearch.png)
+![Sliding Window](./output_images/firstSearch.png)
 
 As per the course notes I have implemented a function which searches around previously detected lane lines since consecutive frames are suppose to have lane lines in fairly similar positions. The output image for this implementation is as flows
-![Search From Prior](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project2-CarND-Advanced-Lane-Lines/output_images/searchFromPrior.png)
+![Search From Prior](./output_images/searchFromPrior.png)
 The code for this implementation is in cells 11-15 of the submitted code.
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
@@ -58,7 +58,7 @@ I did this in cells 16 and 17 of my submitted code. The radius of curvature is c
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
 In step 18 I implemented inverse perspective transform and the result is following image:  
-![Result](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project2-CarND-Advanced-Lane-Lines/output_images/result.png)
+![Result](./output_images/result.png)
 
 ---
 
@@ -70,7 +70,7 @@ Here's a link to my video result:
 
 |Test video|
 |:------------:|
-|![Advance lane lines](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project2-CarND-Advanced-Lane-Lines/output_images/testVideo.gif) |
+|![Advance lane lines](./output_images/testVideo.gif) |
 |[Youtube Link](https://youtu.be/Y02nLcZSTIw)|
 
 
