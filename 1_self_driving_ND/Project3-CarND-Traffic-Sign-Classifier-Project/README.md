@@ -27,11 +27,11 @@ I used pickle to import the training and testing files.From code blocks 1-4 we f
 
 Here is an exploratory visualization of the data set. Following figure displays random images from the training data set and their corresponding labels.
 
-![Visualization of dataset](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project3-CarND-Traffic-Sign-Classifier-Project/output_images/dataExploration.png)
+![Visualization of dataset](./output_images/dataExploration.png)
 
 The figure below shows the histogram of data distribution
 
-![Data Distribution](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project3-CarND-Traffic-Sign-Classifier-Project/output_images/dataDistributionHistogram.png)
+![Data Distribution](./output_images/dataDistributionHistogram.png)
 
 ### Design and Test a Model Architecture
 
@@ -40,12 +40,12 @@ The figure below shows the histogram of data distribution
 For preprocessing, I converted the images to grayscale because the traffic signs are distinguishable by their shapes. I also normalized the images from [0,255] to [0,1]
 
 Here is an example of a traffic sign image before and after grayscaling.
-![Preprocessing](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project3-CarND-Traffic-Sign-Classifier-Project/output_images/NormalizedImage.png)
+![Preprocessing](./output_images/NormalizedImage.png)
 
 I decided to generate additional data because as can be seen from the frequency histogram some of the classes have less that 200 images in the training set. This can cause bias towards class with more data/images. I performed data augmentation on classes that have less than 800 images.
 
 Following is the histogram of data distribution after augmentation
-![Data distribution after augmentation](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project3-CarND-Traffic-Sign-Classifier-Project/output_images/hitogramAfterAugmentation.png)
+![Data distribution after augmentation](./output_images/hitogramAfterAugmentation.png)
 
 To add more data to the the data set, I used the following techniques
 
@@ -55,7 +55,7 @@ To add more data to the the data set, I used the following techniques
 * Random Perspective transform
 * Random translation of the image
 
-![Augmentation output images](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project3-CarND-Traffic-Sign-Classifier-Project/output_images/augmentation.png)
+![Augmentation output images](./output_images/augmentation.png)
 
 Only the classes that have less than 800 images in the training data set are invoked in data augmentation. Code block 17 displays the data augmentation code. Above mentioned augmentation techniques are randomly applied to randomly picked images from these data sets.
 
@@ -99,7 +99,7 @@ The simple LENET architecture fetched me around 96% accuracy on the normalized a
 
 Here are five German traffic signs that I found on the web:
 
-![Images from web](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project3-CarND-Traffic-Sign-Classifier-Project/output_images/ImagesFromWeb.png)
+![Images from web](./output_images/ImagesFromWeb.png)
 
 I chose the 5 signs as I wanted to compared how the classifier would perform on diverse dataset.The 70km/hr will give me a chance to evaluate whether the model can detect speed limits accurately. I choose the slippery slope sign as it is difficult to make out in low resolution. Since the yield and priority road sign look somewhat similar I choose these two to check whether the model can discern between them.
 
@@ -124,4 +124,4 @@ The code for making predictions on my final model is located in the 31st cell of
 
 For the first image, the model in the second guess correctly indentifies as 70km/hr sign. In case of failing yield sign the model doesn't correctly guess in top 5.
 Following image consists of top five soft max probabilities for the 5 images downloaded from web:
-![Top 5 Classification](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project3-CarND-Traffic-Sign-Classifier-Project/output_images/5percent.png)
+![Top 5 Classification](./output_images/5percent.png)
