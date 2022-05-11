@@ -31,7 +31,7 @@ Following are the results of the code on **test videos**
 
 |Challenge video|
 |:------------:|
-|[![Challenge video](./images/challenge.png)](https://youtu.be/Nsn99yFMSAk)|
+|[![Challenge video](./images/challenge.png)]|
 |[Youtube Link](https://youtu.be/Nsn99yFMSAk)|
 
 ### 2. Identify potential shortcomings with your current pipeline.
