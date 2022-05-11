@@ -26,9 +26,9 @@ The process repeats as the object gets another sensor measurements. And as expla
 The simulator connects right away. The simulator has 2 datasets. The simulator displays residual mean squared error (RMSE) in x-position, y-position, velocity in x-direction `VX` and velocity in y-direction `VY`. The aim of the project is to minimize RMSE.
 
 Following displays the final state of the car after running the extendend kalman filter code on `dataset 1`:
-![Dataset1-RMSE](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project5-CarND-Extended-Kalman-Filter-Project/images/EKFDataSet1.png)
+![Dataset1-RMSE](./images/EKFDataSet1.png)
 RMSE = [0.0973, 0.0855, 0.4513, 0.4399]
 
 Following displays the final state of the car after running the extendend kalman filter code on `dataset 2`:
-![Dataset2-RMSE](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project5-CarND-Extended-Kalman-Filter-Project/images/EKFDataset2.png)
+![Dataset2-RMSE](./images/EKFDataset2.png)
 RMSE = [0.0726, 0.0965, 0.4216, 0.4932]
