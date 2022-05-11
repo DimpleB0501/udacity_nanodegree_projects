@@ -8,7 +8,7 @@ incorporate 2:1 or 3:1 ratio of thresholds, I set low and high threshold to 50 a
 Fourth, I implemented a polygon mask to obtain lane lines only. Fifth, hough transform was
 implemented thereby extracting all the lines passing through edge points.
 
-![Pipeline](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project1-CarND-LaneLines-P1/images/Pipeline.png)
+![Pipeline](./images/Pipeline.png)
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by
 looking for slopes of the lines and classifying them into left (-) and right (+) lane lines. Mean of
@@ -21,17 +21,17 @@ Following are the results of the code on **test videos**
 
 |Solid White Right|
 |:------------:|
-|![Solid White Right](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project1-CarND-LaneLines-P1/images/solidWhiteRight.gif) |
+|![Solid White Right](./images/solidWhiteRight.gif) |
 |[Youtube Link](https://youtu.be/1WB2iHLmNtk)|
 
 |Solid White Right|
 |:------------:|
-|![Solid Yellow Left](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project1-CarND-LaneLines-P1/images/solidYellowLeft.gif)|
+|![Solid Yellow Left](./images/solidYellowLeft.gif)|
 |[Youtube Link](https://youtu.be/LmwmfHH3Ma8)|
 
 |Challenge video|
 |:------------:|
-|[![Challenge video](https://github.com/DimpleB0501/selfDrivingNanodegree/blob/master/Project1-CarND-LaneLines-P1/images/challenge.png)](https://youtu.be/Nsn99yFMSAk)|
+|[![Challenge video](./images/challenge.png)](https://youtu.be/Nsn99yFMSAk)|
 |[Youtube Link](https://youtu.be/Nsn99yFMSAk)|
 
 ### 2. Identify potential shortcomings with your current pipeline.
